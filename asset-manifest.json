@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/find-banks3/static/css/main.aab80e48.chunk.css",
+    "main.js": "/find-banks3/static/js/main.c6e1eba2.chunk.js",
+    "main.js.map": "/find-banks3/static/js/main.c6e1eba2.chunk.js.map",
+    "runtime-main.js": "/find-banks3/static/js/runtime-main.72e28af6.js",
+    "runtime-main.js.map": "/find-banks3/static/js/runtime-main.72e28af6.js.map",
+    "static/css/2.818011ed.chunk.css": "/find-banks3/static/css/2.818011ed.chunk.css",
+    "static/js/2.4d3cd870.chunk.js": "/find-banks3/static/js/2.4d3cd870.chunk.js",
+    "static/js/2.4d3cd870.chunk.js.map": "/find-banks3/static/js/2.4d3cd870.chunk.js.map",
+    "static/js/3.5c06dc31.chunk.js": "/find-banks3/static/js/3.5c06dc31.chunk.js",
+    "static/js/3.5c06dc31.chunk.js.map": "/find-banks3/static/js/3.5c06dc31.chunk.js.map",
+    "index.html": "/find-banks3/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/find-banks3/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.aab80e48.chunk.css.map": "/find-banks3/static/css/main.aab80e48.chunk.css.map",
+    "static/js/2.4d3cd870.chunk.js.LICENSE.txt": "/find-banks3/static/js/2.4d3cd870.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72e28af6.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.4d3cd870.chunk.js",
+    "static/css/main.aab80e48.chunk.css",
+    "static/js/main.c6e1eba2.chunk.js"
+  ]
+}
