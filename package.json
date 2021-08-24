@@ -1,6 +1,5 @@
 {
   "name": "proj",
-  "homepage": "https://shreya-jindal.github.io/find-banks3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
