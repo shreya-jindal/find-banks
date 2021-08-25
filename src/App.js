@@ -10,9 +10,9 @@ function App() {
       <Switch>
       <Route path="/favourites" exact component={Banks}/>
       
-      {/* <Route exact path="/"  render={() => <Redirect to="/all-banks" />}/> */}
+      <Route exact path="/"  render={() => <Redirect to="/all-banks" />}/>
   
-    <Route path="/" exact component={Banks}/>
+    <Route path="/all-banks" exact component={Banks}/>
     <Route path="/bank-details" component={Details}/>
     
     </Switch>

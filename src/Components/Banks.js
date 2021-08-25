@@ -146,12 +146,16 @@ export default function Movies(props) {
     }
 
     const handleFav = (currObj) => {
+        let cachedFav=JSON.parse(localStorage.getItem("fav"))
+        if(cachedFav&&cachedFav.includes(currObj.ifsc))
+            currObj.fav=true;
+
         if (currObj.fav) {
             currObj.fav = false;
-            let oldFav=JSON.parse(localStorage.getItem("fav"));
             
-            let newFav = oldFav.filter((bankifsc) => {
-                return (bankifsc !== currObj.ifsc);
+            let newFav = cachedFav.filter((bankifsc) => {
+                
+                return (bankifsc != currObj.ifsc);
             })
             setState({ ...state, fav: newFav });
 
@@ -160,14 +164,13 @@ export default function Movies(props) {
         } else {
             currObj.fav = true;
             
-            let favCopy=JSON.parse( localStorage.getItem("fav"));
-            if(favCopy===undefined){
-                favCopy=[];
+            if(!cachedFav){
+                cachedFav=[];
             }
-            favCopy.push(currObj.ifsc);
-            setState({ ...state, fav: favCopy }); 
+            cachedFav.push(currObj.ifsc);
+            setState({ ...state, fav: cachedFav }); 
 
-            localStorage.setItem("fav",JSON.stringify( favCopy));
+            localStorage.setItem("fav",JSON.stringify( cachedFav));
         }
         
     }
@@ -330,8 +333,9 @@ export default function Movies(props) {
                                                       <td>
                                                           <span class="material-icons-outlined"
                                                               onClick={(e) => {
-                                                                  let fav=JSON.parse(localStorage.getItem("fav"));
-                                                                  if(fav!==undefined&&fav.includes(bankObj.ifsc))
+                                                                  let fav;
+                                                                  fav=JSON.parse(localStorage.getItem('fav'));
+                                                                  if(fav&&fav.includes(bankObj.ifsc))
                                                                     e.currentTarget.innerText="favorite_border"
                                                                   else{
                                                                       e.currentTarget.innerText="favorite"
@@ -340,7 +344,7 @@ export default function Movies(props) {
                                                               }}
                                                             
                                                               >
-                                                              {(JSON.parse(localStorage.getItem("fav"))!==undefined&&JSON.parse(localStorage.getItem("fav")).includes(bankObj.ifsc))?
+                                                              {(JSON.parse(localStorage.getItem("fav"))&&JSON.parse(localStorage.getItem("fav")).includes(bankObj.ifsc))?
                                                                    "favorite":"favorite_border"}
                                                           </span>
                                                       </td>
